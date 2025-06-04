@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { subjects } from "../utils/subjects";
+
 
 import Preloader from "../components/Preloader"; // Import Preloader component
 

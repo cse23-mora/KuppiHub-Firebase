@@ -186,7 +186,7 @@ const NotFound = () => {
           </p>
           <div className="flex items-center justify-center gap-2 text-cyan-400 font-mono">
             <Code className="w-5 h-5 animate-spin" />
-            <span>// TODO: Fix this 404 error</span>
+            <span>TODO: Fix this 404 error</span>
           </div>
         </div>
 
