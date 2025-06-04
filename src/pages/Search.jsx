@@ -61,10 +61,10 @@ export default function Search() {
     }
   }, [query, videos]);
 
-  const getSubjectName = (slug) => {
-    const subject = subjects.find((s) => s.slug === slug);
-    return subject ? subject.name : slug;
-  };
+  // const getSubjectName = (slug) => {
+  //   const subject = subjects.find((s) => s.slug === slug);
+  //   return subject ? subject.name : slug;
+  // };
 
   if (loading) {
     return <Preloader />; // Show preloader while loading

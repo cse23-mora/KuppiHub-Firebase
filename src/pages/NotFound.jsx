@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, ArrowLeft, Code, Users, Sparkles, Zap, Cpu, Database } from 'lucide-react';
+import { ArrowLeft, Code, Users, Sparkles, Zap, Cpu, Database } from 'lucide-react';
 
 const NotFound = () => {
   const [particles, setParticles] = useState([]);
@@ -68,7 +68,7 @@ const NotFound = () => {
   };
 
   const glitchText = "404";
-  const glitchChars = "!@#$%^&*()_+-=[]{}|;':\",./<>?";
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-700 via-blue-950 to-purple-700 overflow-hidden relative">
