@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Changed here
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -26,7 +27,7 @@ export default function App() {
   if (loading) return <Preloader />;
 
   return (
-    <Router basename="/your-repo-name"> {/* 👈 Add this line only if your repo is NOT username.github.io */}
+    <Router basename="/react-testing-1"> {/* 👈 Add this line only if your repo is NOT username.github.io */}
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
