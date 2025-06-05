@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Changed here
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -14,19 +14,19 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import TutorsPage from './pages/TutorsPage';
 import WatchVideo from './pages/WatchVideo';
 import NotFound from "./pages/NotFound";
+
 export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => setLoading(false), 1000); // 1s fake load
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) return <Preloader />;
 
   return (
-   <HashRouter>
+    <Router basename="/your-repo-name"> {/* 👈 Add this line only if your repo is NOT username.github.io */}
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
@@ -39,13 +39,13 @@ export default function App() {
             <Route path="/subjects/:subjectName" element={<Subject />} />
             <Route path="/search" element={<Search />} />
             <Route path="/Tutors" element={<TutorsPage />} />
-             <Route path="/watch/:videoId" element={<WatchVideo />} />
-              <Route path="*" element={<NotFound />} /> 
+            <Route path="/watch/:videoId" element={<WatchVideo />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
         <ScrollToTopButton />
       </div>
-  </HashRouter>
+    </Router>
   );
 }
