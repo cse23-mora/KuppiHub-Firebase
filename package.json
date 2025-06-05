@@ -2,7 +2,7 @@
   "name": "subject-video-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nipunsgeeth.github.io/react-testing-1/build",
+  "homepage": "https://nipunsgeeth.github.io/react-testing-1/",
   "dependencies": {
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",

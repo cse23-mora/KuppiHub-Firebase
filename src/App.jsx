@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -26,7 +26,7 @@ export default function App() {
   if (loading) return <Preloader />;
 
   return (
-    <Router>
+   <HashRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
@@ -46,6 +46,6 @@ export default function App() {
         <Footer />
         <ScrollToTopButton />
       </div>
-    </Router>
+  </HashRouter>
   );
 }
