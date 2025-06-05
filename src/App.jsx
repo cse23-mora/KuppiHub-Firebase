@@ -40,7 +40,7 @@ export default function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/Tutors" element={<TutorsPage />} />
              <Route path="/watch/:videoId" element={<WatchVideo />} />
-              <Route path="*" element={<NotFound />} /> {/* 404 route */}
+              <Route path="*" element={<NotFound />} /> 
           </Routes>
         </main>
         <Footer />
