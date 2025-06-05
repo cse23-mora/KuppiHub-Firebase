@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Changed here
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Using HashRouter
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -27,7 +26,7 @@ export default function App() {
   if (loading) return <Preloader />;
 
   return (
-    <Router basename="/react-testing-1"> {/* 👈 Add this line only if your repo is NOT username.github.io */}
+    <Router> {/* ✅ No 'basename' when using HashRouter */}
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
