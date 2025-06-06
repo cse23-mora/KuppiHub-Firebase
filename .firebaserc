@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "kuppihub-a3bc3"
-  }
+    "default": "kuppihub-a3bc3",
+    "kuppihub-a3bc3": "kuppihub-a3bc3"
+  },
+  "targets": {},
+  "etags": {}
 }
