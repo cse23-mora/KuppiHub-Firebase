@@ -1,9 +1,11 @@
 {
   "hosting": {
+    "site": "kuppihub",
     "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
+      "**public**",
       "**/node_modules/**"
     ],
     "rewrites": [
