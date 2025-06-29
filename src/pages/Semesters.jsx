@@ -39,7 +39,7 @@ const semesters = [
 ];
 
 export default function Semesters() {
-  const [ setVideos] = useState([]);
+  const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 
 useEffect(() => {
