@@ -42,15 +42,14 @@ export default function Semesters() {
   const [ setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    // Simulate loading delay or fetch semester data
-    setTimeout(() => {
-      // You can fetch semester-specific data here if needed
-      setVideos([]); // Placeholder for semester data
-      setLoading(false);
-    }, 800);
-  }, []);
+useEffect(() => {
+  window.scrollTo(0, 0);
+  setTimeout(() => {
+    setVideos([]);
+    setLoading(false);
+  }, 800);
+}, [setVideos, setLoading]);
+
 
   if (loading) {
     return <Preloader />; // Show preloader while loading
