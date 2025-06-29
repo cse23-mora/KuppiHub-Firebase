@@ -4,7 +4,7 @@ import { subjects } from '../utils/subjects_sem3';
 
 import Preloader from '../components/Preloader'; // Import Preloader component
 
-export default function sem3() {
+export default function Sem3() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 
