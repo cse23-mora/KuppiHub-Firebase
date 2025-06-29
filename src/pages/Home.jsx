@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { subjects } from '../utils/subjects';
+import { subjects } from '../utils/subjects_sem3';
 import Preloader from '../components/Preloader';
 import { motion } from "framer-motion";
 

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { subjects } from '../utils/subjects_sem2';
+import { subjects } from '../utils/subjects_sem3';
 
 import Preloader from '../components/Preloader'; // Import Preloader component
 
-export default function Subjects() {
+export default function sem3() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 

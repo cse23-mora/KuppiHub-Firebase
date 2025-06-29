@@ -14,6 +14,10 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import TutorsPage from './pages/TutorsPage';
 import WatchVideo from './pages/WatchVideo';
 import NotFound from "./pages/NotFound";
+import Sem3 from './pages/Sem3';
+import Sem2 from './pages/Sem2';
+
+import Semesters from './pages/Semesters';
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -36,13 +40,18 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/subjects" element={<Subjects />} />
+            <Route path="/sem3" element={<Sem3 />} />
+            <Route path="/sem2" element={<Sem2 />} />
+
+
             <Route path="/subjects/:subjectName" element={<Subject />} />
             <Route path="/search" element={<Search />} />
             <Route path="/Tutors" element={<TutorsPage />} />
              <Route path="/watch/:videoId" element={<WatchVideo />} />
               <Route path="/404NotFound" element={<NotFound />} />
-               <Route path="*" element={<Navigate to="/404NotFound" replace />} />
-          </Routes>
+               <Route path="*" element={<Navigate to="/404NotFound" replace />} /> 
+        <Route path= "/semesters" element={<Semesters />} />
+        </Routes>
         </main>
         <Footer />
         <ScrollToTopButton />

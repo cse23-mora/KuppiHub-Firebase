@@ -51,12 +51,12 @@ export default function Header() {
     Home
   </Link>
   <Link 
-    to="/subjects" 
+    to="/semesters" 
     className="px-5 py-2 rounded-full font-bold text-blue-800 bg-white border border-blue-300 shadow-sm 
                hover:bg-blue-700 hover:text-white hover:shadow-md hover:border-blue-700
                transition-all duration-500 ease-in-out transform hover:scale-105"
   >
-    Subjects
+    Semesters
   </Link>
   <Link 
     to="/Tutors"

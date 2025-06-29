@@ -4,7 +4,7 @@ import { subjects } from '../utils/subjects_sem2';
 
 import Preloader from '../components/Preloader'; // Import Preloader component
 
-export default function Subjects() {
+export default function sem2() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 
