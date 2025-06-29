@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route ,Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -40,7 +40,8 @@ export default function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/Tutors" element={<TutorsPage />} />
              <Route path="/watch/:videoId" element={<WatchVideo />} />
-              <Route path="*" element={<NotFound />} /> {/* 404 route */}
+              <Route path="/404NotFound" element={<NotFound />} />
+               <Route path="*" element={<Navigate to="/404NotFound" replace />} />
           </Routes>
         </main>
         <Footer />
