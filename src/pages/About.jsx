@@ -23,7 +23,7 @@ const About = () => {
     "Because 'I'll study later' becomes 'OMG, exam is tomorrow!'",
     "Because sometimes textbooks feel like they're written in elvish",
     "Because that one friend who explains everything better than the lecturer deserves a platform",
-    "Because passing exams shouldn't require selling your soul to the coffee devil"
+    "Because passing exams shouldn't require selling your soul to the coffee devil " 
   ];
 
   const howItWorks = [
