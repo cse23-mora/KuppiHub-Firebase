@@ -39,18 +39,17 @@ const semesters = [
 ];
 
 export default function Semesters() {
-  const [videos, setVideos] = useState([]);
+  // Remove videos and setVideos
   const [loading, setLoading] = useState(true);
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-  setTimeout(() => {
-    setVideos([]);
-    setLoading(false);
-  }, 800);
-}, [setVideos, setLoading]);
-
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // No need to call setVideos
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+  }, [setLoading]);
+  
   if (loading) {
     return <Preloader />; // Show preloader while loading
   }
