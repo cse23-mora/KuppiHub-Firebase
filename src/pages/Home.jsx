@@ -72,7 +72,7 @@ export default function HomePage() {
                   <div className="bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden group">
                     <div className="relative h-48 w-full">
                     <img
-                      src={`./subjects/${subject.slug}.jpg`}
+                      src={`./subjects/${subject.slug}.webp`}
                       alt={subject.name}
                       loading="lazy"
                       width="400"  // Set actual width

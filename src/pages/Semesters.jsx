@@ -44,11 +44,10 @@ export default function Semesters() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // No need to call setVideos
     setTimeout(() => {
       setLoading(false);
     }, 800);
-  }, [setLoading]);
+  }, []); // <-- Fix: use empty array
   
   if (loading) {
     return <Preloader />; // Show preloader while loading
@@ -150,7 +149,7 @@ export default function Semesters() {
           })}
         </div>
 
-        {/* Additional Info Section */}
+        {/* Additional Info Section
         <div className="mt-16 text-center">
           <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -172,7 +171,7 @@ export default function Semesters() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

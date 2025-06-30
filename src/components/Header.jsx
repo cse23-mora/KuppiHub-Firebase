@@ -125,7 +125,7 @@ export default function Header() {
               ${isMenuOpen ? 'max-h-[1000px] opacity-100 scale-100 delay-0' : 'max-h-0 opacity-0 scale-95 delay-0'}`}
 >
   <div className="p-4 space-y-4 transition-opacity duration-500">
-    {['Home', 'Subjects', 'Tutors','About'].map((item, i) => (
+    {['Home', 'Subjects', 'Semesters','About'].map((item, i) => (
       <Link
         key={i}
         to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}

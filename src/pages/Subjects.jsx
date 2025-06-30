@@ -50,7 +50,7 @@ export default function Subjects() {
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl">
                   <div className="relative h-48 w-full">
                     <img
-                      src={`/subjects/${subject.slug}.jpg`}
+                      src={`/subjects/${subject.slug}.webp`}
                       alt={subject.name}
                       className="h-full w-full object-cover group-hover:opacity-75 transition-opacity duration-300"
                     />
