@@ -6,5 +6,7 @@ export const subjects = [
   { name: "Differential Equations", slug: "differential-equations" },
   { name: "Operating Systems", slug: "operating-systems" },
   { name: "Communication Skills", slug: "communication-skills" },
-  { name: "Applied Statics", slug: "applied-statics" }
+  { name: "Applied Statics", slug: "applied-statics" },
+  { name: "Data Communication and Networking", slug: "data-communication-and-networking" },
+  
 ];
