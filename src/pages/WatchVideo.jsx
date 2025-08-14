@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function WatchVideo() {
   const { videoId } = useParams();
@@ -48,32 +49,39 @@ export default function WatchVideo() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-100 to-indigo-100 p-4 sm:p-6">
-      {/* Title */}
-      <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-center px-4 max-w-4xl">
-        {video.title}
-      </h1>
-      
-      {/* Responsive YouTube iframe container */}
-      <div className="w-full max-w-4xl mx-auto mb-4 sm:mb-6">
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-          <iframe
-            src={`https://www.youtube.com/embed/${youtubeId}`}
-            title={video.title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-          ></iframe>
+    <>
+      {/* Prevent indexing */}
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-100 to-indigo-100 p-4 sm:p-6">
+        {/* Title */}
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-center px-4 max-w-4xl">
+          {video.title}
+        </h1>
+        
+        {/* Responsive YouTube iframe container */}
+        <div className="w-full max-w-4xl mx-auto mb-4 sm:mb-6">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+            <iframe
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title={video.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+            ></iframe>
+          </div>
+        </div>
+        
+        {/* Description */}
+        <div className="w-full max-w-4xl mx-auto px-4">
+          <p className="text-sm sm:text-base text-gray-700 text-center leading-relaxed">
+            {video.description}
+          </p>
         </div>
       </div>
-      
-      {/* Description */}
-      <div className="w-full max-w-4xl mx-auto px-4">
-        <p className="text-sm sm:text-base text-gray-700 text-center leading-relaxed">
-          {video.description}
-        </p>
-      </div>
-    </div>
+    </>
   );
 }
